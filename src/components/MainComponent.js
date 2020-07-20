@@ -1,9 +1,17 @@
 import React, {Component} from 'react'
+import Home from './HomeComponent.js'
+import Header from './HeaderComponent';
+import Footer from './FooterComponent';
 
 class Main extends Component {
     render(){
         return(
-<div>hello world</div>
+<React.Fragment>
+<Header/>
+<Home/>
+<Footer/>
+</React.Fragment>            
+
         )
     }
 }
