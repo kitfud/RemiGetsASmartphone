@@ -2,45 +2,32 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
-  background-color: #282c34;
+  background-color: peachpuff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color:peachpuff;
+}
+
+.jumbotron{
+  background-color: peachpuff !important;
+  color:black;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .row-header{
   margin:0px auto;
   padding:0px auto;
   background-color: peachpuff;
+  color:black;
 }
 
 .row-content {
@@ -49,21 +36,35 @@
   border-bottom: 1px ridge;
   min-height:400px;
   background-color: peachpuff;
+  color:black;
 }
 
 .footer{
   background-color: peachpuff;
   margin:0px auto;
   padding: 20px 0px 20px 0px;
+  color:black;
+  min-height: 100vh;
 }
-.jumbotron {
-  padding:70px 30px 70px 30px;
-  margin:0px auto;
-  background-color: peachpuff ;
+
+
+.navlink {
+  color:black;
+}
+.navbar-dark {
+  background-color: peachpuff;
   color:black;
 }
 
+.navbar-toggler-icon{
+  color:black;
+}
 
-.navbar-dark {
-  background-color: peachpuff;
+navbar-toggler-icon{
+  color:black;
+ 
+}
+
+.navbar-brand{
+color:black;
 }
