@@ -3,21 +3,32 @@ import Home from './HomeComponent.js';
 import About from './AboutComponent.js';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import { SLIDES } from '../shared/slides';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+import { fetchSlides } from '../redux/ActionCreators';
+
+const mapDispatchToProps = dispatch => ({
+    fetchSlides: ()=>dispatch(fetchSlides())
+})
+
+const mapStateToProps = state =>{
+    return{
+        slides: state.slides
+    }
+}
+
 
 class Main extends Component {
 
     constructor(props) {
         super(props);
     
-        this.state = {
-          slides: SLIDES 
-        };
       }
 
+ 
 componentDidMount(){
-    console.log(this.state.slides)
+    this.props.fetchSlides();
 }
 
     render(){
@@ -26,7 +37,7 @@ componentDidMount(){
 <Header/>
 
 <Switch>
-<Route path='/home' component={() =><Home slides={this.state.slides}/>} />
+<Route path='/home' component={() =><Home slides={this.props.slides}/>} />
 <Route path='/about' component={About} />
 <Redirect to="/home" />
 </Switch>
@@ -38,4 +49,4 @@ componentDidMount(){
     }
 }
 
-export default Main;
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Main));

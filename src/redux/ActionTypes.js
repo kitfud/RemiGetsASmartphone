@@ -1,0 +1,3 @@
+export const SLIDES_LOADING = 'SLIDES_LOADING';
+export const SLIDES_FAILED = 'SLIDES_FAILED';
+export const ADD_SLIDES = 'ADD_SLIDES';
