@@ -3,6 +3,8 @@ import Home from './HomeComponent.js';
 import About from './AboutComponent.js';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
+import Art from './ArtComponent';
+
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
@@ -38,7 +40,8 @@ componentDidMount(){
 
 <Switch>
 <Route path='/home' component={() =><Home slides={this.props.slides}/>} />
-<Route path='/about' component={About} />
+<Route exact path='/about' component={About} />
+<Route exact path='/art' component={()=> <Art slides={this.props.slides}/>} />
 <Redirect to="/home" />
 </Switch>
 

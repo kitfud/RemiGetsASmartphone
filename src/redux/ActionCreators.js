@@ -1,7 +1,7 @@
 import * as ActionTypes from './ActionTypes';
-import { auth, firestore, fireauth, firebasestore,storage } from '../firebase/firebase';
+import { firestore} from '../firebase/firebase';
 //import {SLIDES} from '../shared/slides';
-import firebase from 'firebase';
+
 
 export const fetchSlides = () => (dispatch) => {
 
