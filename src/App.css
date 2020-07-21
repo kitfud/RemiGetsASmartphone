@@ -44,9 +44,14 @@
   margin:0px auto;
   padding: 20px 0px 20px 0px;
   color:black;
-  min-height: 100vh;
 }
 
+.jumbotron {
+  padding:1px 1px 1px 1px;
+  margin:0px auto;
+  background-color: peachpuff ;
+  color:black;
+}
 
 .navlink {
   color:black;
