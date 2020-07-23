@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import { Card, CardImg, CardText, CardTitle, Breadcrumb, BreadcrumbItem, CardImgOverlay,Button, Row, Col, CardBody } from 'reactstrap';
 import { Loading } from './LoadingComponent';
 
+import { Link } from 'react-router-dom';
+
 function Slides ({slides, isLoading, errMess}){
     if (isLoading) {
         return(
@@ -52,12 +54,22 @@ class Art extends Component {
     render(){
         return(
             <React.Fragment>
-            <div>Artwork:</div>
+           
             <div className="container">
-<div className="row">
-<Slides slides = {this.props.slides.slides} isLoading={this.props.slides.isLoading} 
+            <div className ="row">
+            <Breadcrumb>
+                    <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
+                    <BreadcrumbItem active>Artwork</BreadcrumbItem>
+            </Breadcrumb>
+            <div className="col-12">   
+            <div>Artwork:</div>
+            </div>
+            </div>   
+           
+            <div className="row">
+            <Slides slides = {this.props.slides.slides} isLoading={this.props.slides.isLoading} 
             errMess={this.props.slides.errMess}/>
-</div>
+            </div>
             </div>
            
             </React.Fragment>  

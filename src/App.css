@@ -31,28 +31,31 @@
 }
 
 .row-content {
-  margin:0px auto;
+  margin:0px;
   padding: 50px 0px 50px 0px;
   border-bottom: 1px ridge;
   min-height:400px;
-  background-color: peachpuff;
+  background-color:white;
   color:black;
 }
 
 .footer{
-  background-color: peachpuff;
+  background-color: lightgray;
   margin:0px auto;
   padding: 20px 0px 20px 0px;
   color:black;
-  min-height: 100vh;
+  min-height: 20vh;
 }
 
 .jumbotron {
-  padding:1px 1px 1px 1px;
-  margin:0px auto;
+  margin-bottom:0px !important;
   background-color: peachpuff ;
   color:black;
+  background-image: url(/assets/images/remiBackground1.png);
+  background-size: 100%;
 }
+
+
 
 .navlink {
   color:black;
@@ -74,3 +77,24 @@ navbar-toggler-icon{
 .navbar-brand{
 color:black;
 }
+
+.carousel {
+background:rgba(211, 211, 211, 0.63);
+}
+
+.carousel-item {
+margin-bottom: 45px;
+margin-top: 20px;
+}
+
+.carousel-item img {
+  align-self: 0;
+  min-height: 100px;
+  width:80%;
+  height: 80%;
+}
+
+.container {
+  margin-top: 5px;
+}
+

@@ -12,11 +12,17 @@ render(){
                         <h5>Links</h5>
                         <ul className = "list-unstyled">
                         <li><Link to="/home">Home</Link></li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/art">Artwork</Link></li>
                         </ul>
                     </div>
                     <div className = "col-7 col-sm-5">
-                        <h5>Project details:</h5>
-                        <span>(include details)</span>
+                        <h5>Remi's Instagram:</h5>
+                        
+                            
+                                <a className="btn btn-social-icon btn-instagram" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/rembotthecat/"><i className="fa fa-instagram"></i></a>
+                            
+                       
                     </div>
 
                 </div>
