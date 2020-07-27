@@ -4,20 +4,17 @@
 
 
 .App-header {
-  background-color: peachpuff;
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color:peachpuff;
+
 }
 
-.jumbotron{
-  background-color: peachpuff !important;
-  color:black;
-}
+
 
 .App-link {
   color: #61dafb;
@@ -26,13 +23,13 @@
 .row-header{
   margin:0px auto;
   padding:0px auto;
-  background-color: peachpuff;
+
   color:black;
 }
 
 .row-content {
   margin:0px;
-  padding: 50px 0px 50px 0px;
+  padding: 35px 0px 35px 0px;
   border-bottom: 1px ridge;
   min-height:400px;
   background-color:white;
@@ -40,19 +37,73 @@
 }
 
 .footer{
-  background-color: lightgray;
+  background-image: url(/assets/images/RemiWebResize.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  
+
   margin:0px auto;
   padding: 20px 0px 20px 0px;
   color:black;
-  min-height: 20vh;
+  min-height: 65vh;
+}
+
+ @media (max-width: 380px) {
+  .footer{
+    min-height: 5vh;
+  }
+
+  #copy{
+   
+    margin-left:50px;
+    margin-top: 3px;
+    
+  }
+
+  #phoneAlign{
+  
+  margin-top:0px; 
+  margin-left:0px;
+ 
+  }
+
+  #instabutton{
+    margin-left:0px;
+    margin-top:10px;
+  }
+
+ 
+  .footer{
+    background-image: url(/assets/images/RemiWebResize.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+}
+
+
+#instabutton{
+  margin-left:10px;
+  margin-top:60px;
+}
+
+#copy{
+  margin-left:50px;
+  margin-top:250px;
+}
+
+
+#phoneAlign{
+  margin-top:65px; 
+  margin-left:28px
 }
 
 .jumbotron {
   margin-bottom:0px !important;
-  background-color: peachpuff ;
-  color:black;
   background-image: url(/assets/images/remiBackground1.png);
-  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 
@@ -61,7 +112,7 @@
   color:black;
 }
 .navbar-dark {
-  background-color: peachpuff;
+
   color:black;
 }
 
@@ -98,3 +149,7 @@ margin-top: 20px;
   margin-top: 5px;
 }
 
+.textResize{
+  font-size:10px;
+  color:black;
+}

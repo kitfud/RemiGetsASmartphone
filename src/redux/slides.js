@@ -1,4 +1,3 @@
-
 import * as ActionTypes from './ActionTypes';
 
 export const Slides = (state = {isLoading:true,errMess:null,slides:[]}, action) => {

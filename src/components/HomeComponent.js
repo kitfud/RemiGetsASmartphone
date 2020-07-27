@@ -1,12 +1,10 @@
 import React, {Component, useState} from 'react'
-import { Loading } from './LoadingComponent';
-import { Link } from 'react-router-dom';
+
 import {  Carousel,
     CarouselItem,
     CarouselControl,
     CarouselIndicators,
-    CarouselCaption,
-    Breadcrumb, BreadcrumbItem } from 'reactstrap';
+     } from 'reactstrap';
 
 const slideCollection = []
 
