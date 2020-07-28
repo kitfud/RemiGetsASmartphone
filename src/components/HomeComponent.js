@@ -75,11 +75,13 @@ class Home extends Component {
 
 
         return(
-            <div className = "container">
-            <div className="row row-content">
+			<React.Fragment>
+ 			<div className = "container">
+            <div className="row row-content align-items-center">
             <div className="col">
-        	<div>
+        	
 			
+
 				<Carousel
 					activeIndex={activeIndex}
 					next={this.next}
@@ -90,23 +92,35 @@ class Home extends Component {
                        
 					
                     <div className="row ">
-                    <CarouselControl direction='prev' directionText='Previous' onClickHandler={this.previous} />
-					<CarouselControl direction='next' directionText='Next' onClickHandler={this.next} />
+                   
                     <CarouselIndicators items={slideCollection} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
                     </div>
 					
                     
 				</Carousel>
-			</div>
+				
+				
+		
 
 
-
-
+				<CarouselControl  direction='prev' directionText='Previous' onClickHandler={this.previous}/>
+				<CarouselControl  direction='next' directionText='Next' onClickHandler={this.next} />
              </div>
+			
         </div>
 
+	
+
             </div>
+
+
+
+
+			   
+
           
+			</React.Fragment>
+           
 
         )
         }

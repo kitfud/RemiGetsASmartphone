@@ -130,7 +130,9 @@ color:black;
 }
 
 .carousel {
-background:rgba(211, 211, 211, 0.63);
+background-size: 0px;
+width:85%;
+margin:auto;
 }
 
 .carousel-item {
@@ -141,12 +143,45 @@ margin-top: 20px;
 .carousel-item img {
   align-self: 0;
   min-height: 100px;
-  width:80%;
-  height: 80%;
+  width:70%;
+  height: 70%;
 }
+
+.carousel-inner .active{
+  background: 20px !important;
+ 
+}
+.carousel-control-prev-icon {
+  background-image: url(/assets/images/LeftPaw.png)!important;
+  background-size: 50% !important;
+  height: 150px !important;
+  width: 150px !important;
+  margin-right:30px;
+ 
+
+ }
+ 
+ .carousel-control-next-icon {
+   background-image: url(/assets/images/RightPaw.png) !important;
+   background-size: 50% !important;
+   height: 150px !important;
+   width: 150px !important;
+   margin-left:30px;
+
+ }
+
+ .carousel-indicators .active{
+  background-color: darkgray;
+}
+.carousel-indicators {
+  background-color:lightgray;
+}
+
 
 .container {
   margin-top: 5px;
+  padding-left:30px;
+  padding-right:30px;
 }
 
 .textResize{
