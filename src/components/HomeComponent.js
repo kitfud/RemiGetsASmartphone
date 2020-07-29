@@ -1,4 +1,5 @@
-import React, {Component, useState} from 'react'
+import React, {Component} from 'react'
+import uuid from 'react-uuid'
 
 import {  Carousel,
     CarouselItem,
@@ -23,8 +24,11 @@ class Home extends Component {
 		this.onExiting = this.onExiting.bind(this);
         this.onExited = this.onExited.bind(this);
 
-    this.props.slides.slides.map(item=>
-            slideCollection.push({src: item.image}))
+		
+    this.props.slides.slides.map((item)=>
+			slideCollection.push({url: item.image}),
+			console.log(slideCollection)
+			)
         
     }
   
@@ -57,17 +61,21 @@ class Home extends Component {
  
     
     render(){
-        const { activeIndex } = this.state;
+		const { activeIndex } = this.state;
+	
 
-		const slides = slideCollection.map((item) => {
+		
+
+		const slides = slideCollection.map(item => {
 			return (
 				<CarouselItem
 					onExiting={this.onExiting}
 					onExited={this.onExited}
-                    key={item.src}
-                    className = "itemStyle"
+                    key={uuid()}
+					className = "itemStyle"
+					
 				>
-					<img key={item.src} src={item.src} alt={item.altText} />
+					<img key={uuid()} src={item.url} alt={item.altText} />
 
 				</CarouselItem>
 			);
@@ -75,7 +83,7 @@ class Home extends Component {
 
 
         return(
-			<React.Fragment>
+	
  			<div className = "container">
             <div className="row row-content align-items-center">
             <div className="col">
@@ -86,40 +94,33 @@ class Home extends Component {
 					activeIndex={activeIndex}
 					next={this.next}
 					previous={this.previous}
+					id="carousel-example-generic"
 				>
                    
                     {slides}
-                       
-					
-                    <div className="row ">
                    
-                    <CarouselIndicators items={slideCollection} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
-                    </div>
 					
                     
 				</Carousel>
-				
-				
-		
-
-
-				<CarouselControl  direction='prev' directionText='Previous' onClickHandler={this.previous}/>
-				<CarouselControl  direction='next' directionText='Next' onClickHandler={this.next} />
-             </div>
 			
+				  
+				   
+
+				<CarouselControl href="#carousel-example-generic" direction='prev' directionText='Previous' onClickHandler={this.previous}/>
+				<CarouselControl href="#carousel-example-generic" direction='next' directionText='Next' onClickHandler={this.next} />
+				<CarouselIndicators items={slideCollection} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+             </div>
+			 
         </div>
 
 	
 
             </div>
 
-
-
-
-			   
+   
 
           
-			</React.Fragment>
+	
            
 
         )

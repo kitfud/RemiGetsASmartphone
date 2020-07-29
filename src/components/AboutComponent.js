@@ -34,7 +34,7 @@ class About extends Component {
                                 <dd className="col-6">Rita + Kit</dd>
                                 <dt className="col-6">Watercolors:</dt>
                                 <dd className="col-6">Kit</dd>
-                                <dt className="col-6">Webdevelopment:</dt>
+                                <dt className="col-6">Webdev:</dt>
                                 <dd className="col-6">Kit</dd>
 
                             </dl>

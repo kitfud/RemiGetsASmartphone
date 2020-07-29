@@ -33,7 +33,7 @@ componentDidMount(){
     this.props.fetchSlides();
 }
 
-    render(){
+render(){
         return(
 <React.Fragment>
 <Header/>

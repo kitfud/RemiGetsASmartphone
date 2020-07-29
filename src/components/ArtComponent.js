@@ -53,28 +53,29 @@ class Art extends Component {
     
     render(){
         return(
-            <React.Fragment>
-           
-            <div className="container">
-            <div className ="row">
-            <Breadcrumb>
-                    <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
-                    <BreadcrumbItem active>Artwork</BreadcrumbItem>
-            </Breadcrumb>
-            <div className="col-12">   
-            <div>Artwork:</div>
-            </div>
-            </div>   
-           
-            <div className="row">
-            <Slides slides = {this.props.slides.slides} isLoading={this.props.slides.isLoading} 
-            errMess={this.props.slides.errMess}/>
-            </div>
-            </div>
-           
-            </React.Fragment>  
+         
+           <React.Fragment>
+       <div className="container">
 
-        )
+<div className ="row">
+<Breadcrumb>
+        <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
+        <BreadcrumbItem active>Artwork</BreadcrumbItem>
+</Breadcrumb>
+<div className="col-12">   
+<div>Artwork:</div>
+</div>
+</div>   
+
+<div className="row align-items-center">
+<Slides slides = {this.props.slides.slides} isLoading={this.props.slides.isLoading} 
+errMess={this.props.slides.errMess}/>
+</div>
+</div>
+           </React.Fragment>
+        )    
+           
+        
     }
 }
 
