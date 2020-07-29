@@ -158,10 +158,12 @@ margin-top: 20px;
 
   .carousel-indicators .active{
     background-color: darkgray;
+   visibility:hidden !important;
  
   }
   .carousel-indicators {
     background-color:lightgray;
+    visibility:hidden !important;
     
    
   }
