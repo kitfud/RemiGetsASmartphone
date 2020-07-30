@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media,CardText } from 'reactstrap';
+import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 class About extends Component {

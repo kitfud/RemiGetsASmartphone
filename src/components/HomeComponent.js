@@ -1,5 +1,8 @@
 import React, {Component} from 'react'
-import uuid from 'react-uuid'
+import uuid from 'uuid'
+
+
+
 
 import {  Carousel,
     CarouselItem,
@@ -8,7 +11,6 @@ import {  Carousel,
      } from 'reactstrap';
 
 const slideCollection = []
-
 
 
 
@@ -25,12 +27,22 @@ class Home extends Component {
         this.onExited = this.onExited.bind(this);
 
 		
-    this.props.slides.slides.map((item)=>
-			slideCollection.push({url: item.image}),
-			console.log(slideCollection)
-			)
+   
         
-    }
+	}
+
+	componentDidMount(){
+
+		if(!this.props.slidesLoaded){
+			this.props.slides.slides.map((item)=>
+			slideCollection.push({url: item.image, src:uuid()}),
+			
+			)
+		}
+
+	}
+	
+	
   
     onExiting() {
 		this.animating = true;
@@ -75,7 +87,7 @@ class Home extends Component {
 					className = "itemStyle"
 					
 				>
-					<img key={uuid()} src={item.url} alt={item.altText} />
+					<img  src={item.url} alt={item.altText} />
 
 				</CarouselItem>
 			);
@@ -94,7 +106,10 @@ class Home extends Component {
 					activeIndex={activeIndex}
 					next={this.next}
 					previous={this.previous}
-					id="carousel-example-generic"
+					id="myCarousel"
+					interval={10000}
+				
+					
 				>
                    
                     {slides}

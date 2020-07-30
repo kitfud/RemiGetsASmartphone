@@ -84,6 +84,7 @@ color:black;
 background-size: 0px;
 width:85%;
 margin:auto;
+
 }
 
 .carousel-item {
@@ -122,7 +123,7 @@ margin-top: 20px;
  }
 
  .carousel-indicators .active{
-  background-color: darkgray;
+  background-color: lightgreen;
   display: flex;
 }
 .carousel-indicators {
@@ -156,17 +157,6 @@ margin-top: 20px;
 
  
 
-  .carousel-indicators .active{
-    background-color: darkgray;
-   visibility:hidden !important;
- 
-  }
-  .carousel-indicators {
-    background-color:lightgray;
-    visibility:hidden !important;
-    
-   
-  }
   .container {
     overflow: hidden !important;
   }

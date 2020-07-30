@@ -25,12 +25,23 @@ class Main extends Component {
 
     constructor(props) {
         super(props);
+
+        this.state = {
+            slidesLoaded: false
+        }
     
       }
 
  
 componentDidMount(){
-    this.props.fetchSlides();
+    if(this.state.slidesLoaded === false){
+        this.props.fetchSlides()
+        .then(()=>{
+            this.setState({slidesLoaded:true}) 
+        })
+       
+    }
+     
 }
 
 render(){
@@ -39,7 +50,7 @@ render(){
 <Header/>
 
 <Switch>
-<Route path='/home' component={() =><Home slides={this.props.slides}/>} />
+<Route path='/home' component={() =><Home slides={this.props.slides} slidesLoaded = {this.state.slidesLoaded}/>} />
 <Route exact path='/about' component={About} />
 <Route exact path='/art' component={()=> <Art slides={this.props.slides}/>} />
 <Redirect to="/home" />

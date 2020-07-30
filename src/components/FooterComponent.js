@@ -1,4 +1,4 @@
-import React, {Component, useState} from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
 
@@ -74,9 +74,4 @@ function Footer () {
 }
 
 
-const cardStyle = {
-   width: "50%",
-   marginLeft:"150px"
- 
-}
 export default Footer
