@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Card, CardImg, Breadcrumb, BreadcrumbItem, CardBody } from 'reactstrap';
+import { Card, CardImg, Breadcrumb, BreadcrumbItem, CardBody, CardText } from 'reactstrap';
 import { Loading } from './LoadingComponent';
 
 import { Link } from 'react-router-dom';
@@ -33,6 +33,7 @@ function Slides ({slides, isLoading, errMess}){
             <CardBody>
             <CardImg width="100%" top src={slide.image} alt="" />
             </CardBody>
+            <CardText>{slide.text}</CardText>
             </Card> 
             </div>
     )

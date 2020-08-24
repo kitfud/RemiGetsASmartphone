@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {CardBody,CardText,CardImg, Card} from 'reactstrap'
 import uuid from 'uuid'
 
 
@@ -26,8 +27,6 @@ class Home extends Component {
 		this.onExiting = this.onExiting.bind(this);
         this.onExited = this.onExited.bind(this);
 
-		
-   
         
 	}
 
@@ -35,7 +34,7 @@ class Home extends Component {
 
 		if(!this.props.slidesLoaded){
 			this.props.slides.slides.map((item)=>
-			slideCollection.push({url: item.image, src:uuid()}),
+			slideCollection.push({url: item.image, src:uuid(), text:item.text}),
 			
 			)
 		}
@@ -84,12 +83,28 @@ class Home extends Component {
 					onExiting={this.onExiting}
 					onExited={this.onExited}
                     key={uuid()}
-					className = "itemStyle"
-					
+					className = "itemStyle"	
 				>
-					<img  src={item.url} alt={item.altText} />
+			
+				<Card style = {cardStyle}>
+				<CardBody border="none" className='align-items-center'>
+				<CardImg width="100%" align-self-center src={item.url} alt="" />
+				
+				</CardBody>
+				</Card>
+				<CardText>{item.text}</CardText>
+				
+				
 
 				</CarouselItem>
+				
+
+
+				
+			
+			
+				
+
 			);
 		});
 
@@ -108,8 +123,6 @@ class Home extends Component {
 					previous={this.previous}
 					id="myCarousel"
 					interval={10000}
-				
-					
 				>
                    
                     {slides}
@@ -143,5 +156,8 @@ class Home extends Component {
 }
 
 
+const cardStyle = {
+	border:"none" 
+}
 
 export default Home;

@@ -20,6 +20,7 @@ class About extends Component {
                 <div className="col-12 col-md-6">
                     <h2>Backstory:</h2>
                     <p>Rita and I thought it would be great to make a storybook based on our cat, Remi, and how she travelled to Seattle from Pennsylvania and still wants to keep in touch with her best cat pal, Tara.</p> 
+                    <img src="/assets/images/RemiTara.jpg" className="img-fluid" alt="Responsive"></img>
                 </div>
                 <div className="col-12 col-md-6">
                 <Card>
